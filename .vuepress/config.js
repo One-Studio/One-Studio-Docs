@@ -40,15 +40,25 @@ module.exports = {
     ],
 
     sidebar: {
-      '/pages/':[
+      '/pages/': [
         {
           collapsable: false, // 可选的, 默认值是 true,
-          sidebarDepth: 1,    // 可选的, 默认值是 1
+          sidebarDepth: 1, // 可选的, 默认值是 1
+          children: [['home.md', '简介']],
+        },
+        {
+          collapsable: false, // 可选的, 默认值是 true,
           children: [
-              ['home.md', '简介'],
+              ['docs.md','文档开发&教程']
           ]
       },
-      ]
-    }
+      //   {
+      //     collapsable: false, // 可选的, 默认值是 true,
+      //     children: [
+      //         ['changelog.md','更新日志Test']
+      //     ]
+      // },
+      ],
+    },
   },
 }

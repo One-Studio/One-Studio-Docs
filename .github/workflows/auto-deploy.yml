@@ -12,12 +12,16 @@ jobs:
     - uses: actions/checkout@v1
     - run: npm ci
 
-    - name: git settings
+    - name: git
       run:  |
          cd .vuepress/dist
          git clone git@github.com:One-Studio/One-Studio.github.io.git
-
-    - run: npm run build
+         
+         
+    - run: |
+        cd ../..
+        npm run build
+        cd .vuepress/dist
 
     - name: commit
       uses: github-actions-x/commit@v2.6

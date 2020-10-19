@@ -13,12 +13,12 @@ jobs:
     - run: npm ci
     - run: npm run build
           
-    - name: Deploy mybells.github.io/master
-      uses: peaceiris/actions-gh-pages@v2
+    - name: Pushes to another repository
+      uses: cpina/github-action-push-to-another-repository@master
       env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.DEPLOY_ACCESS_TOKEN }}
-        EXTERNAL_REPOSITORY: One-Studio/One-Studio.github.io
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: .vuepress/dist
+          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_ACCESS_TOKEN }}
       with:
-          emptyCommits: false
+          source-directory: '.vuepress/dist'
+          destination-github-username: 'One-Studio'
+          destination-repository-name: 'One-Studio.github.io'
+          user-email: 438518244@qq.com

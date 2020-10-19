@@ -35,14 +35,14 @@ module.exports = {
       },
       {
         text: 'Github',
-        link: 'https://github.com/advancedfx/advancedfx',
+        link: 'https://github.com/One-Studio',
       },
     ],
 
     sidebar: {
       '/pages/': [
         {
-          collapsable: false, // 可选的, 默认值是 true,
+          collapsable: true, // 可选的, 默认值是 true,
           sidebarDepth: 1, // 可选的, 默认值是 1
           children: [['home.md', '简介']],
         },
@@ -51,13 +51,13 @@ module.exports = {
           children: [
               ['docs.md','文档开发&教程']
           ]
-      },
-      //   {
-      //     collapsable: false, // 可选的, 默认值是 true,
-      //     children: [
-      //         ['changelog.md','更新日志Test']
-      //     ]
-      // },
+        },
+            collapsable: false, // 可选的, 默认值是 true,
+          {
+            children: [
+                ['changelog.md','更新日志Test']
+            ]
+        },
       ],
     },
   },

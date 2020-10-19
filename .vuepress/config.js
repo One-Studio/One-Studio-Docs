@@ -50,14 +50,14 @@ module.exports = {
           collapsable: false, // 可选的, 默认值是 true,
           children: [
               ['docs.md','文档开发&教程']
+          ],
+		},
+		{
+          collapsable: false, // 可选的, 默认值是 true,
+          children: [
+              ['changelog.md','更新日志Test']
           ]
-        },
-            collapsable: false, // 可选的, 默认值是 true,
-          {
-            children: [
-                ['changelog.md','更新日志Test']
-            ]
-        },
+        }
       ],
     },
   },

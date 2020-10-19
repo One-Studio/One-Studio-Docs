@@ -22,6 +22,8 @@ jobs:
          git commit -m 'deploy'
          
          cd ../..
+         git config --global user.email "438518244@qq.com"
+         git config --global user.name "Purp1e"
                    
     - name: Pushes to another repository
       uses: cpina/github-action-push-to-another-repository@master

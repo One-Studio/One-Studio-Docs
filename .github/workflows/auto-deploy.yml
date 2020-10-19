@@ -11,20 +11,24 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: npm ci
-    - run: npm run build
-    
+
     - name: git settings
       run:  |
-         git config --global user.email "438518244@qq.com"
-         git config --global user.name "Purp1e"
          cd .vuepress/dist
-         
-         git init
-         git add -A
-         git commit -m 'deploy'
-         
-         cd ../..
+         git clone git@github.com:One-Studio/One-Studio.github.io.git
 
+    - run: npm run build
+
+    - name: commit
+      uses: github-actions-x/commit@v2.6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        push-branch: master
+        commit-message: 'Automatically pushed by GitHub Actions'
+        rebase: 'true' # pull abd rebase before commit
+        force-add: 'true'
+        name: Purple-CSGO
+        email: 438518244@qq.com
                    
     - name: Pushes to another repository
       uses: cpina/github-action-push-to-another-repository@master

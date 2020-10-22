@@ -9,6 +9,10 @@ npm run build
 # 进入生成的文件夹
 cd .vuepress/dist
 
+# 生成CNAME
+touch CNAME
+echo dev.hlae.site > CNAME
+
 git init
 git add -A
 git commit -m 'deploy'

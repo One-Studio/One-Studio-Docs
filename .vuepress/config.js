@@ -48,9 +48,7 @@ module.exports = {
             {
                 title: '小组介绍',
                 collapsable: false,
-                children: [
-                    ['/guide/about.md', '简介'],
-                ]
+                path: '/guide/about.md'
             },
             {
                 title: '路线图',
@@ -85,10 +83,24 @@ module.exports = {
                     {
                         title: 'HLAE Studio',
                         children: [
-                            //['/projects/HLAE-Studio/readme.md', '项目说明'],
+                            ['/projects/HLAE-Studio/about.md', '项目说明'],
                             ['/projects/HLAE-Studio/roadmap.md', '路线图']
                         ],
-                    }
+                    },
+                    {
+                        title: 'One Encoder',
+                        children: [
+                            ['/projects/One-Encoder/about.md', '项目说明'],
+                            ['/projects/One-Encoder/roadmap.md', '路线图']
+                        ],
+                    },
+                    {
+                        title: 'One CSGO',
+                        children: [
+                            ['/projects/One-CSGO/about.md', '项目说明'],
+                            ['/projects/One-CSGO/roadmap.md', '路线图']
+                        ],
+                    },
                 ]
             },
         ],

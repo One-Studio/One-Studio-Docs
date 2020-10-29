@@ -75,9 +75,10 @@ module.exports = {
                     {
                         title: 'CSGO HUD Generator',
                         children: [
-                            //['/projects/CSGO-Hud-Generator/readme.md', '项目说明'],
+                            ['/projects/CSGO-Hud-Generator/about.md', '项目说明'],
                             ['/projects/CSGO-Hud-Generator/roadmap.md', '路线图'],
-                            ['/projects/CSGO-Hud-Generator/components.md', '组件']
+                            ['/projects/CSGO-Hud-Generator/prototype.md', '原型设计'],
+                        //    ['/projects/CSGO-Hud-Generator/components.md', '组件']
                         ],
                     },
                     {

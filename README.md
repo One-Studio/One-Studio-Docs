@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 heroText: One Studio
-tagline: 你是怎么找到这里的？进来看看吧
+tagline: 你是怎么找到这里的？进来看看吧😀
 actionText: 点击进入 →
 actionLink: /guide/about.md
 # features:

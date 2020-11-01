@@ -48,9 +48,7 @@ module.exports = {
             {
                 title: '小组介绍',
                 collapsable: false,
-                children: [
-                    ['/guide/about.md', '简介'],
-                ]
+                path: '/guide/about.md'
             },
             {
                 title: '路线图',
@@ -77,18 +75,33 @@ module.exports = {
                     {
                         title: 'CSGO HUD Generator',
                         children: [
-                            //['/projects/CSGO-Hud-Generator/readme.md', '项目说明'],
+                            ['/projects/CSGO-Hud-Generator/about.md', '项目说明'],
                             ['/projects/CSGO-Hud-Generator/roadmap.md', '路线图'],
-                            ['/projects/CSGO-Hud-Generator/components.md', '组件']
+                            ['/projects/CSGO-Hud-Generator/prototype.md', '原型设计'],
+                        //    ['/projects/CSGO-Hud-Generator/components.md', '组件']
                         ],
                     },
                     {
                         title: 'HLAE Studio',
                         children: [
-                            //['/projects/HLAE-Studio/readme.md', '项目说明'],
+                            ['/projects/HLAE-Studio/about.md', '项目说明'],
                             ['/projects/HLAE-Studio/roadmap.md', '路线图']
                         ],
-                    }
+                    },
+                    {
+                        title: 'One Encoder',
+                        children: [
+                            ['/projects/One-Encoder/about.md', '项目说明'],
+                            ['/projects/One-Encoder/roadmap.md', '路线图']
+                        ],
+                    },
+                    {
+                        title: 'One CSGO',
+                        children: [
+                            ['/projects/One-CSGO/about.md', '项目说明'],
+                            ['/projects/One-CSGO/roadmap.md', '路线图']
+                        ],
+                    },
                 ]
             },
         ],

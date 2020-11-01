@@ -4,7 +4,15 @@ node_js:
 install:
   - yarn install # npm ci
 script:
-  - "./deploy.sh" # npm run docs:build
+  - yarn build
+  - cd .vuepress/dist
+  - touch CNAME
+  - echo dev.hlae.site > CNAME
+  - git init
+  - git add -A
+  - git commit -m 'deploy'
+  - git remote add origin git@github.com:One-Studio/One-Studio.github.io.git
+  - git push -u --force origin master
 deploy:
   provider: pages
   skip_cleanup: true

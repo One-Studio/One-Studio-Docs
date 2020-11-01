@@ -5,6 +5,7 @@ install:
   - yarn install # npm ci
 script:
   - yarn build
+after_script:
   - cd .vuepress/dist
   - touch CNAME
   - echo dev.hlae.site > CNAME
@@ -12,11 +13,13 @@ script:
   - git add -A
   - git commit -m 'deploy'
   - git remote add origin git@github.com:One-Studio/One-Studio.github.io.git
-  - git push --force --quiet "https://${$GITHUB_TOKEN}@github.com/One-Studio/One-Studio.github.io.git" master:master
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
+
+env:
+  global:
+      - GH_REF: github.com/One-Studio/One-Studio.github.io.git
 deploy:
-  provider: pages
   skip_cleanup: true
-  local_dir: .vuepress/dist
   github_token: $GITHUB_TOKEN # A token generated on GitHub allowing Travis to push code on you repository. Set in the Travis settings page of your repository, as a secure variable
   keep_history: true
   on:
